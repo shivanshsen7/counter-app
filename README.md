@@ -31,6 +31,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
+# Requirements
 Create a react app which captures the user click on the area of the card area.
 
 Following points are the requirements for the application.
