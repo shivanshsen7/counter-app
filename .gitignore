@@ -14,7 +14,7 @@
 # misc
 .eslintcache
 debug.log
-   package-lock.json
+package-lock.json
 
 .DS_Store
 .env.local
