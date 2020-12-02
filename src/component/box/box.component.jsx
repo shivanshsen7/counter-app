@@ -16,8 +16,15 @@ class Box extends Component {
 
   changeBackgroundColor = (reset = false) => {
     const boxElement = document.getElementById("box");
-    const color = reset ? "#ffffff" : randomColor();
+    const color = reset
+      ? "#ffffff"
+      : randomColor({ luminosity: "light", hue: "blue" });
     boxElement.style.backgroundColor = color;
+    boxElement.style.boxShadow =
+      color === "#ffffff"
+        ? `1px 1px 10px 2px #dadada`
+        : `1px 1px 10px 2px ${color}`;
+
     this.setState({ color });
   };
 
@@ -39,6 +46,16 @@ class Box extends Component {
     this.changeBackgroundColor(white);
   };
 
+  copyToClipboard = () => {
+    // console.log(event.target.value);
+    const text = document.getElementById("counting");
+    text.select();
+    document.execCommand("copy");
+  };
+
+  componentDidUpdate() {
+    this.copyToClipboard();
+  }
   render() {
     return (
       <div id='box' className='box'>
@@ -47,6 +64,13 @@ class Box extends Component {
           <AddLogo className='control-logo' onClick={this.addCount} />
           <RefreshLogo className='control-logo' onClick={this.resetCount} />
           <SubLogo className='control-logo' onClick={this.subCount} />
+          <input
+            type='text'
+            value={JSON.stringify(this.state)}
+            readOnly
+            name='counting'
+            id='counting'
+          />
         </div>
       </div>
     );
