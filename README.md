@@ -33,21 +33,20 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 # Requirements
 Create a react app which captures the user click on the area of the card area.
-
 Following points are the requirements for the application.
-It should have a card area which displays the number of clicks in the center.
-Background color of the card should randomly change on each click. You are free to choose the colors.
-There should be three buttons below the card.
-+  button =>  This button should add to the number of clicks to the card area.
-- button => This button should reduce the number of clicks to the card area.
-refresh button => Refresh button should make the number of clicks on the card to 0 and set the background to white.
+### It should have a card area which displays the number of clicks in the center.
+### Background color of the card should randomly change on each click. You are free to choose the colors.
+There should be three buttons below the card. 
+1. &#43;  button =>  This button should add to the number of clicks to the card area.
+2. &#45; button => This button should reduce the number of clicks to the card area.
+3. :arrows_counterclockwise: button => Refresh button should make the number of clicks on the card to 0 and set the background to white.
 
 
 
 Following pointers are important:
 
-Create components which can hold state.
-Attach events on the button area.
-Keep track of the state and update it on the card.
-Update the background color on every click.
+* Create components which can hold state.
+* Attach events on the button area.
+* Keep track of the state and update it on the card.
+* Update the background color on every click.
 
