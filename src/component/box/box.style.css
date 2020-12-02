@@ -18,11 +18,12 @@
   text-align: center;
   transition: all 500ms ease;
   font-size: 72px;
-  
+  transform: translateY(-25px);
+  /* translate: 0 -15px 0; */
 }
 .count:hover {
   color: rgba(0, 0, 0, 0.4);
-  transform: scale(1.3);
+  transform: translateY(-30px) scale(1.3);
 }
 
 .controls {
@@ -30,8 +31,8 @@
   gap: 10px;
   justify-content: space-around;
   padding: 5px;
-  box-sizing: content-box;
-  
+  box-sizing: border-box;
+
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -48,7 +49,12 @@
   position: relative;
   transform: scale(1.1);
 }
-#counting{
+.copy-logo {
+  position: static;
+  margin-left: auto;
+  /* margin-right: auto; */
+}
+#counting {
   top: -222px;
   position: absolute;
 }

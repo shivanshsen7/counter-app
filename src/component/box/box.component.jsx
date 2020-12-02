@@ -3,6 +3,7 @@ import randomColor from "randomcolor";
 import { ReactComponent as AddLogo } from "../../icons/add.svg";
 import { ReactComponent as RefreshLogo } from "../../icons/refresh.svg";
 import { ReactComponent as SubLogo } from "../../icons/substract.svg";
+import { ReactComponent as CopyLogo } from "../../icons/copy.svg";
 import "./box.style.css";
 
 class Box extends Component {
@@ -53,12 +54,13 @@ class Box extends Component {
     document.execCommand("copy");
   };
 
-  componentDidUpdate() {
-    this.copyToClipboard();
-  }
   render() {
     return (
       <div id='box' className='box'>
+        <CopyLogo
+          className='control-logo copy-logo'
+          onClick={this.copyToClipboard}
+        />
         <div className='count'>{this.state.count}</div>
         <div className='controls'>
           <AddLogo className='control-logo' onClick={this.addCount} />
